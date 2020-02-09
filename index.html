@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="wiath=device-wiaht, initial-scale=1">
+    <title>Planets</title>
+    <link rel="stylesheet" href="css/normolize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <script src="https://kit.fontawesome.com/1f4d0ef3cb.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // в диве с классом variants__list ищем все li-шки
+            // и по клику на li выполняем функцию
+            $('.variants__list').find('li').on('click', function (e) {
+                // this  в данном случае - li, на который мы кликнули
+                var tabName = $(this).attr('data-name="#family"'); // в tabName сохраняем то, что в атрибуте data-name у li-шки
+
+                $('.variants__list li').removeClass('active');
+                $('.variants__list li').removeClass('action'); // у ВСЕХ лишек, находящихся в .variants__list удаляем класс "active" 
+                $(this).addClass('active'); // а той лишке, на которую нажали, добавляем класс "active"
+
+                $(tabName).addClass('active'); // добавляем класс "active" тому блоку-контенту, который нужно отобразить в соответствии с tabName	
+            });
+        });
+    </script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <section class="page">
+        <div class="container">
+            <img class="satellite" src="img/satellite.png" alt="satellite">
+            <img class="planet" src="img/planet.png" alt="planet">
+            <h1>365+ дней<br>
+                безлимитного участвия
+            </h1>
+            <div class="page__text1">в любых мероприятиях со скидкой до 92%</div>
+            <div class="page-left">
+                <img class="human" src="img/human.png" alt="human">
+            </div>
+            <div class="margin">
+                <h3>Для тех, кто не ищет<br>
+                    окольных путей
+                </h3>
+                <div class="page__text2">Тотальный безлимит на весь<br>
+                    2016 год и даже больше!
+                </div>
+                <div>
+                    <a class="page__a" href="">Заказать безлимит</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <section class="reasons">
+            <h2>10 причин<br> заказать безлимит</h2>
+            <div class="reason-content">
+                <div class="reason">
+                    <img class="icon" src="img/stick-man8.png" alt="stick-man">
+                    <div class="title">100+<br> пошаговых курсов</div>
+                    <div class="text">на все сферы жизни.</div>
+                </div>
+                <div class="reason">
+                    <img class="icon" src="img/teachers.png" alt="teachers">
+                    <div class="title">200+<br> концептуальных мероприятий</div>
+                </div>
+                <div class="reason">
+                    <img class="icon" src="img/sales.png" alt="sales">
+                    <div class="title">Экономия денег.</div>
+                    <div class="text">Скидка до 92%<br> на безлимит.</div>
+                </div>
+                <div class="reason">
+                    <img class="icon" src="img/chronometer.png" alt="">
+                    <div class="title">Экономия времени.</div>
+                    <div class="text">Не тратьтье время на старые грабли.</div>
+                </div>
+                <div class="reason">
+                    <img class="icon" src="img/money.png" alt="money">
+                    <div class="title">Увеличения дохода.</div>
+                    <div class="text">Новые возможности, за счет развивая сознания.</div>
+                </div>
+                <div class="reason">
+                    <img class="icon" src="img/puzzle.png" alt="puzzle">
+                    <div class="title">Легко.</div>
+                    <div class="text">Целой год увлекательной игры, а не изнуряющей гонки.</div>
+                </div>
+                <div class="reason">
+                    <img class="icon" src="img/pointer.png" alt="pointer">
+                    <div class="title">Индывидуально.</div>
+                    <div class="text">Выбирайте свой темп и стиль прохождения курсов.</div>
+                </div>
+                <div class="reason">
+                    <img class="icon" src="img/rocket.png" alt="rocket">
+                    <div class="title">Быстрые результаты.</div>
+                    <div class="text">Выполнение задания сразу же меняет вашу реальность.</div>
+                </div>
+                <div class="reason">
+                    <img class="icon" src="img/handshake.png" alt="handshake">
+                    <div class="title">Поддержка.</div>
+                    <div class="text">Новые знакомства и общение с единомышенниками.</div>
+                </div>
+                <div class="reason">
+                    <img class="icon" src="img/navigation.png" alt="snavigation">
+                    <div class="title">Свобода.</div>
+                    <div class="text">Вылезая из свой обусловленности, сами выберите курс жизни.</div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="events">
+        <div class="container">
+            <h2 class="events__title">Ближайшие мероприятие</h2>
+            <p class="events__description">первых месяцев 2016 года</p>
+            <div class="event clearfix">
+                <img src="img/matrix.png" alt="matrix" class="even_picleft">
+                <div class="event__content">
+                    <h4 class="event__content-name">Матрица сознания</h4>
+                    <p>Революционное открытие, которое раскладывает все по полочкам</p>
+                    <p>Путь развития - это лестница, а расти можно только со своего уровня.</p>
+                    <p>Следование же рекомендациям других ступеней лишь пустая трата времени.</p>
+                    <p>Пора определить свой уровень развития и получить план роста на 10-15 лет.</p>
+                </div>
+            </div>
+            <div class="event clearfix">
+                <img src="img/Denetics.png" alt="Denetics" class="even_picright">
+                <div class="event__content right">
+                    <h4 class="event__content-name">Денетика</h4>
+                    <p>Меньше работать и больше зарабатывать</p>
+                    <p>2*2*2*2*2=32</p>
+                    <p>Если научится каждий год удваивать доход, то через 5 лет он вырастет в 32 раза.</p>
+                    <p>Денетика - это о том, как стабильно расти по деньга без сверхусилий и ущерба остальным сферам
+                        жизни.</p>
+                </div>
+            </div>
+            <div class="event clearfix">
+                <img src="img/self-esteem.png" alt="self-esteem" class="even_picleft">
+                <div class="event__content">
+                    <h4 class="event__content-name">Самооценка</h4>
+                    <p>Ценить себя и не зависеть от мнения других</p>
+                    <p>Радость и яркость вашей жизни на 100% зависят от вашей самооценки.</p>
+                    <p>За 90 дней поднимаем самооценку и радуемся полноценной жизни.</p>
+                    <p>Каждій из нас и так уже классній. Просто здесь можно стать чуть класснее.</p>
+                </div>
+            </div>
+            <div class="event clearfix">
+                <img src="img/childhood.png" alt="childhood" class="even_picright">
+                <div class="event__content right">
+                    <h4 class="event__content-name">Полноценное детство</h4>
+                    <p>То самое чуство, что твоя жизнь уже удалась, хотя она еще только начинается</p>
+                    <p>Родителям, которые хотят, чтобы их дети выросли сильнее и свободнее, чем они сами...</p>
+                    <p>Как дать ребенку то, чего сами были лишены?</p>
+                    <p>Полноценное детство - фундамент личности. Научно: по возрастам, шагам и типам детей.</p>
+                </div>
+            </div>
+            <div class="event clearfix">
+                <img src="img/method.png" alt="method" class="even_picleft">
+                <div class="event__content">
+                    <h4 class="event__content-name">360 методов увеличения прибыли</h4>
+                    <p>Зв 5 лет бизнес-консультирования мы собрали более 360 методов, каждый из которых работает и
+                        увеличивает прибыль в этничных компаниях.</p>
+                    <p>Можно теоретизировать о том, какой из них лучше. А можно за 1 год внедрить все 360 методов(самому
+                        или чужими руками) и наслаждаться результатами - увеличение прибыли в 2.5 - 12 раз.</p>
+                </div>
+            </div>
+            <div class="event clearfix">
+                <img src="img/confidence.png" alt="confidence" class="even_picright">
+                <div class="event__content left">
+                    <h4 class="event__content-name">Увереность в себе</h4>
+                    <p>Уровень вашей уверенности - показатель вашей результативности</p>
+                    <p>Мало результатов не потому, что вы мало стараетесь. Каждый из нас обладает определенной степенью
+                        саообмана и мешает достигать целей.</p>
+                    <p>Меньше обманиваешь себя - больше достигаешь. Как стать уверенным и перестать себе врать?</p>
+                </div>
+            </div>
+            <div class="event clearfix">
+                <img src="img/action.png" alt="action" class="even_picleft">
+                <div class="event__content">
+                    <h4 class="event__content-name">12 сфер жизни в действии</h4>
+                    <p class="event__text">Внедрение: от теории к практике</p>
+                    <p class="event__text">Ваши результаты, успех и насыщеность жизни зависят от положения дел в самых
+                        слабых сферах.</p>
+                    <p class="event__text">Караван движется со скоростью самого медленного верблюда.</p>
+                    <p class="event__text">Как ускорить всех медленных "верблюдов" и гармонизировать между собой 12 сфер
+                        жизни?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="practics">
+        <div class="container">
+            <div class="practic">
+                <img src="img/100+.png" alt="100+">
+                <div class="practics__title">практических курсов</div>
+                <div class="practics__text">На любой вкус и цвет.</br>
+                    Выбирайте и внедряйте!
+                </div>
+            </div>
+            <div class="practic">
+                <img src="img/200+.png" alt="200+">
+                <div class="practics__title">мероприятие с теорией</div>
+                <div class="practics__text">Концептуальное знание - сила!<br>
+                    Еще никогда оно не было так доступно.
+                </div>
+            </div>
+        </div>
+        <div class="practis__href">
+            <a class="practis__a" href="">Заказать безлимит</a>
+        </div>
+    </section>
+    <section class="training">
+        <div class="container">
+            <h2 class="training__freedom">11.000 часов свободы!
+                <img src="img/ball.png" alt="ball" class="training__balloon">
+                <img src="img/present.png" alt="present" class="training__gift">
+            </h2>
+            <div class="training__text">Распорядитесь этим временем с умом.</div>
+            <div>
+                <img src="img/wonder.png" alt="wonder" class="training-wonder">
+            </div>
+            <div class="training__context">
+                <p class="training__context1">10 лет × 365 дней × 3 часа/день=11.000 часов</p>
+                <p class="training__context_text">
+                    Участвуя в готовых пошаговых курсах, за 1 год вы достигнете тех же результатов,
+                    что и мы за 10 лет ежедневных эксперементов, иследований и мытарств.
+                </p>
+                <p class="training__context_text">
+                    Нет смысла ходить по знакомым нам граблям.
+                    Проходите тренинги и наслаждайтесь своей жизнью!
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="video">
+        <div class="container">
+            <h2>Видео</h2>
+            <div class="video__context">
+                <iframe height="200" src="http://www.youtube.com/embed/DkaUsBwe0fo"></iframe>
+            </div>
+        </div>
+    </section>
+    <section class="variants">
+        <div class="container">
+            <h2>Варианты безлимитного участвия</h2>
+            <div class="variants__top">
+                <ul class="variants__list">
+                    <li class="variants__list-item">
+                        <img src="img/girl.png" alt="girl">
+                        <div class="variants__list-text">Быстрый старт</div>
+                    </li>
+                    <li class="variants__list-item">
+                        <img src="img/Reset.png" alt="reset">
+                        <div class="variants__list-text">Полная перезагрузка</div>
+                    </li>
+                    <li class="variants__list-item action">
+                        <img src="img/family1.png" alt="family">
+                        <div class="variants__list-text">Семейное участвие</div>
+                    </li>
+                    <li class="variants__list-item">
+                        <img src="img/all.png" alt="box">
+                        <div class="variants__list-text">ВСЕ включено</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="variants__content" id="family">
+                <img src="img/family.png" class="variants__content-img" alt="family">
+                <div>
+                    <h4 class="variants__content-title">Семейное участвие</h4>
+                    <ul class="variants__content-list">
+                        <li class="disk">
+                            <div class="variants__content-listItem">Полный доступ ко всем мероприятиям вместе со своей
+                                второй половинкой</div>
+                        </li>
+                        <li class="disk">
+                            <div class="variants__content-listItem">Доступ ко всем теоретическим материалам</div>
+                        </li>
+                        <li class="disk">
+                            <div class="variants__content-listItem">VIP билет для каждого из партнеров в любом выбранном
+                                тренинге</div>
+                        </li>
+                        <li class="disk">
+                            <div class="variants__content-listItem">Связь с ведущим по e-mail</div>
+                        </li>
+                        <li class="disk">
+                            <div class="variants__content-listItem">Доступ к закрытым обсуждениям</div>
+                        </li>
+                        <li class="disk">
+                            <div class="variants__content-listItem">50% скидка на билет для любимого человека</div>
+                        </li>
+                        <li class="disk">
+                            <div class="variants__content-listItem">Укрепление отношений благодаря совместному развитию
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="table">
+        <div class="container">
+            <div class="table__context">
+                <div class="table_padding active">
+                    <div class="table__context-text border">Количество</div>
+                    <div class="table__context-text border">дней</div>
+                    <div class="table__context-text font">Тренинги:</div>
+                    <div class="table__context-text">Денетика</div>
+                    <div class="table__context-text">Увереность в себе</div>
+                    <div class="table__context-text">Матрица сознания </div>
+                    <div class="table__context-text border">12 сфер жизни</div>
+                    <div class="table__context-text">Самооценка</div>
+                    <div class="table__context-text">Полноценное детство</div>
+                    <div class="table__context-text">360 методов увеличения прибили</div>
+                    <div class="table__context-text border">100+ тренингов и курсов</div>
+                    <div class="table__context-text border">Определение предназначения</div>
+                    <div class="table__context-text">Общая стоимость</div>
+                    <div class="table__context-text font border">Стоимость пакета</div>
+                    <div class="table__context-text font">Экономия</div>
+                </div>
+            </div>
+            <div class="table__context center">
+                <div class="table__context-text color">Быстрый</div>
+                <div class="table__context-text color1">старт</div>
+                <div class="table_padding-ignored">
+                    <div class="table__context-text font border">100+</div>
+                    <div class="table__context-text border">все</div>
+                    <div class="table__context-text border">18 000 руб.</div>
+                    <div class="table__context-text border">12 000 руб.</div>
+                    <div class="table__context-text border">-</div>
+                    <div class="table__context-text border">-</div>
+                    <div class="table__context-text border">-</div>
+                    <div class="table__context-text border">-</div>
+                    <div class="table__context-text border">-</div>
+                    <div class="table__context-text border">-</div>
+                    <div class="table__context-text border">-</div>
+                    <div class="table__context-text">> 30 000 руб.</div>
+                </div>
+                <div class="table__context-text color1">15 000 руб.</div>
+                <div class="table_padding-ignored radius">
+                    <div class="table__context-text font">50%</div>
+                    <div class="table__context-text padding"><a class="table__conext-a">Заказать</a></div>
+                </div>
+            </div>
+            <div class="table__context center">
+                <div class="table__context-text color">Полная</div>
+                <div class="table__context-text color1">перезагрузка</div>
+                <div class="table_padding-ignored">
+                    <div class="table__context-text font border">365 +</div>
+                    <div class="table__context-text border">все</div>
+                    <div class="table__context-text border">18 000 руб.</div>
+                    <div class="table__context-text border">12 000 руб.</div>
+                    <div class="table__context-text border">15 000 руб.</div>
+                    <div class="table__context-text border">12 000 руб.</div>
+                    <div class="table__context-text border">15 000 руб.</div>
+                    <div class="table__context-text border">12 000 руб.</div>
+                    <div class="table__context-text border">36 000 руб.</div>
+                    <div class="table__context-text border">600 000 руб.</div>
+                    <div class="table__context-text border">-</div>
+                    <div class="table__context-text">> 700 000 руб.</div>
+                </div>
+                <div class="table__context-text color1">50 000 руб.</div>
+                <div class="table_padding-ignored radius">
+                    <div class="table__context-text font">92%</div>
+                    <div class="table__context-text padding"><a class="table__conext-a">Заказать</a></div>
+                </div>
+            </div>
+            <div class="table__context center">
+                <div class="table__context-text action">Семейное</div>
+                <div class="table__context-text action1">участвие</div>
+                <div class="table_padding-ignored">
+                    <div class="table__context-text font border">365 +</div>
+                    <div class="table__context-text border">все</div>
+                    <div class="table__context-text border">27 000 руб.</div>
+                    <div class="table__context-text border">28 000 руб.</div>
+                    <div class="table__context-text border">22 000 руб.</div>
+                    <div class="table__context-text border">18 000 руб.</div>
+                    <div class="table__context-text border">23 000 руб.</div>
+                    <div class="table__context-text border">18 000 руб.</div>
+                    <div class="table__context-text border">54 000 руб.</div>
+                    <div class="table__context-text border">850 000 руб.</div>
+                    <div class="table__context-text border">-</div>
+                    <div class="table__context-text">> 1 050 000 руб.</div>
+                </div>
+                <div class="table__context-text action1">75 000 руб.</div>
+                <div class="table_padding-ignored radius">
+                    <div class="table__context-text font">92%</div>
+                    <div class="table__context-text padding"><a class="table__conext-a">Заказать</a></div>
+                </div>
+            </div>
+            <div class="table__context center">
+                <div class="table__context-text color">Все</div>
+                <div class="table__context-text color1">включено</div>
+                <div class="table_padding-ignored">
+                    <div class="table__context-text font border">365 +</div>
+                    <div class="table__context-text border">все</div>
+                    <div class="table__context-text border">36 000 руб.</div>
+                    <div class="table__context-text border">24 000 руб.</div>
+                    <div class="table__context-text border">30 000 руб.</div>
+                    <div class="table__context-text border">24 000 руб.</div>
+                    <div class="table__context-text border">30 000 руб.</div>
+                    <div class="table__context-text border">24 000 руб.</div>
+                    <div class="table__context-text border">72 000 руб.</div>
+                    <div class="table__context-text border">1 300 000 руб.</div>
+                    <div class="table__context-text border">150 000 руб.</div>
+                    <div class="table__context-text">> 1 500 000 руб.</div>
+                </div>
+                <div class="table__context-text color1">150 000 руб.</div>
+                <div class="table_padding-ignored radius">
+                    <div class="table__context-text font">90%</div>
+                    <div class="table__context-text padding"><a class="table__conext-a">Заказать</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ticket">
+        <div class="container">
+            <div class="ticket__content-title">Забронируйте билет на безлимитное участвие сейчас по лучшей цене!</div>
+            <p class="ticket__content">Стоимость вырастет через</p>
+            <div class="ticket__time">
+                <div class="ticket__timeitem">7</div>
+                <div class="ticket__timeitem">12</div>
+                <div class="ticket__timeitem">49</div>
+            </div>
+            <div class="ticket__time-name">
+                <div class="ticket__time-name">часов</div>
+                <div class="ticket__time-name">минут</div>
+                <div class="ticket__time-name">секунд</div>
+            </div>
+            <div class="practis__href">
+                <a class="practis__a" href="">ЗАБРОНИРОВАТЬ</a>
+            </div>
+        </div>
+    </section>
+    <section class="pay">
+        <div class="container">
+            <h2 class="pay__content-h">Способы оплаты</h2>
+            <div class="pay__content">
+                <i class="fas fa-wallet"></i>
+                <div class="pay__content-title">Разовый платеж</div>
+                <div class="pay__content-title-name">Оплатите безлимит сразу</div>
+            </div>
+            <div class="pay__content">
+                <i class="far fa-calendar-alt"></i>
+                <div class="pay__content-title">Предоплата</div>
+                <div class="pay__content-title-name">Внесите 1/3 стоимости любого пакета, а остальное - в течении</div>
+                <div class="pay__content-title-name">21 дня со дня платежа. Для этого отправьте нам запрос на почту
+                </div>
+                <div class="pay__content-title-name"><a class="pay__content-title-a">hello@perfect.am</a></div>
+            </div>
+        </div>
+    </section>
+    <section class="unlimited">
+        <div class="container">
+            <h2>Как получить безлимит?</h2>
+            <ul class="unlimited__content">
+                <li class="unlimited__content-item action">
+                    <img src="img/bag.png" alt="bag">
+                    <div class="unlimited__content-titel">Шаг № 1</div>
+                    <div class="unlimited__content-text">Выберете пакет</div>
+                    <div class="unlimited__content-text">безлимита</div>
+                </li>
+                <li class="unlimited__content-item">
+                    <img src="img/file.png" alt="file">
+                    <div class="unlimited__content-titel">Шаг № 2</div>
+                    <div class="unlimited__content-text">Оформите свой</div>
+                    <div class="unlimited__content-text">заказ</div>
+                </li>
+                <li class="unlimited__content-item">
+                    <img src="img/money1.png" alt="money">
+                    <div class="unlimited__content-titel">Шаг № 3</div>
+                    <div class="unlimited__content-text">Оплатите в течении</div>
+                    <div class="unlimited__content-text">трех дней</div>
+                </li>
+                <li class="unlimited__content-item">
+                    <img src="img/padlock.png" alt="padlock">
+                    <div class="unlimited__content-titel">Шаг № 4</div>
+                    <div class="unlimited__content-text">Безлимитный доступ</div>
+                    <div class="unlimited__content-text">открыт!</div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section classs="question">
+        <div class="container">
+            <div class="question__content-titel">
+                <h2>Вопрос-ответ</h2>
+            </div>
+            <div class="question">
+                <div class="question__content">
+                    <div class="question__context">
+                        <img src="img/question.png" alt="question" class="question-img">
+                        <div class="question_titel">На кого рассчитан этот курс?</div>
+                    </div>
+                    <div class="question__context-text">
+                        Путь развития - это лестница, а расти можно только со своего уровня.
+                        Следование рекомендациям других ступеней лишь пустая трата времени. Пора
+                        определить свой уровень развития и получить план роста на 10-15 лет.
+                    </div>
+                </div>
+                <div class="question__content">
+                    <div class="question__context">
+                        <img src="img/question.png" alt="question" class="question-img">
+                        <div class="question_titel">На сколько эффективны тренинги?</div>
+                    </div>
+                    <div class="question__context-text">
+                        Путь развития - это лестница, а расти можно только со своего уровня.
+                        Следование рекомендациям других ступеней лишь пустая трата времени. Пора
+                        определить свой уровень развития и получить план роста на 10-15 лет.
+                    </div>
+                </div>
+                <div class="question__content">
+                    <div class="question__context">
+                        <img src="img/question.png" alt="question" class="question-img">
+                        <div class="question_titel">На кого рассчитан этот курс?</div>
+                    </div>
+                    <div class="question__context-text">
+                        Путь развития - это лестница, а расти можно только со своего уровня.
+                        Следование рекомендациям других ступеней лишь пустая трата времени. Пора
+                        определить свой уровень развития и получить план роста на 10-15 лет.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer__text">
+                2015 С ЭФФУКТ ЛИЧНОСТИ, ИП Костров АП ИНН 3445101898 ОГРИП 1093460000886
+            </div>
+            <div class="footer__text">Политика конфиденциальности</div>
+        </div>
+    </footer>
+</body>
+</html>
